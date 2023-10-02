@@ -180,7 +180,23 @@ model-viewer {
 }
 
 /* Style for the social media icons as buttons */
-.github-button,
+.github-button{
+   width: 100px;
+   height: 100px; /* Set the width of the button */
+   color: #fff; /* Change to the desired text color */
+   text-align: center;
+   text-decoration: none;
+   border-radius: 5px;
+   font-weight: bold;
+   transition: background-color 0.3s;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: transparent; /* Start with a transparent background */
+   border: none; /* Remove border */
+   cursor: pointer; /* Change cursor on hover */
+}
 .social-icon-button {
    width: 100px; /* Set the width of the button */
    height: 100px; /* Set the height of the button */
