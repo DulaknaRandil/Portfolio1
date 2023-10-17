@@ -23,6 +23,8 @@ body {
 
 }
 
+
+
 .header.hidden {
    transform: translateY(-100%);
    transition: transform 0.3s ease;
@@ -39,29 +41,55 @@ body {
 
 
 .logo {
-   max-width: 7vw;
+   position: relative;
+
+   max-width: 7%;
    z-index: 3;
 }
 
 .Designer{
-   max-width: 7vw;
-   margin-left: -5vw;
+   position: fixed;
+   right: 85%;
+   max-width: 7%;
+   
    z-index: 3;
    
 }
 .head-title{
+   position: absolute;
+   left: 18%;
    color: #2fbf7f;
    font-size: 5vw ;
    font-family: 'Segoe UI';
 }
 
 .main-nav-list {
+   position: relative;
+right: 0.5%;
+
    display: flex;
    
    list-style: none;
-   gap: 1.5vw;
+   gap: 15px;
+   
    z-index: 3;
 }
+
+.menu-toggle {
+   display: none; /* Hide by default for larger screens */
+   cursor: pointer;
+   bottom: 6%;
+}
+
+.bar {
+   width: 25px;
+   height: 4px;
+   background-color: #fff;
+   margin: 4px 0;
+}
+
+
+
 
 .main-nav-link {
    text-decoration: none;
@@ -79,19 +107,129 @@ body {
    color: #fffa;
 }
 
+@media(max-width:900px){
+   .head-title{
+      font-size: 9vw;
+   left: 33%;
+      
+      }
+   .logo{
+      max-width: 12%;
+      
+   }
+   
+   .Designer{
+      max-width: 12%;
+      right: 74%;
+   }
+      .header{
+         padding: 0vw 1vw;
+      }
+      .menu-toggle{
+            display: block; /* Show menu icon for smaller screens */
+   
+      }
+      .main-nav-list {
+      
+          display: none; /* Hide navigation links by default for smaller screens */
+          background-color: #000; /* Background color for mobile menu */
+          position: absolute;
+          top: 120px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+         
+         
+      }
+   
+      .main-nav-link {
+         color: #fff;
+          display: block;
+          position: relative;
+          left: 0%;
+         font-size: 100%;
+          text-align: center;
+           
+      
+          
+          
+          
+          
+      }
+   
+      .show-menu {
+          display: block !important;
+      }
+}
+@media (max-width: 600px) {
+
+   .head-title{
+   font-size: 9vw;
+left: 33%;
+   
+   }
+.logo{
+   max-width: 12%;
+   
+}
+
+.Designer{
+   max-width: 12%;
+   right: 74%;
+}
+   .header{
+      padding: 0vw 1vw;
+   }
+   .menu-toggle{
+         display: block; /* Show menu icon for smaller screens */
+
+   }
+   .main-nav-list {
+   
+       display: none; /* Hide navigation links by default for smaller screens */
+       background-color: #000; /* Background color for mobile menu */
+       position: absolute;
+       top: 70px;
+       left: 0;
+       right: 0;
+       z-index: 1;
+      
+      
+   }
+
+   .main-nav-link {
+      color: #fff;
+       display: block;
+       position: relative;
+       left: 0%;
+      font-size: 100%;
+       text-align: center;
+        
+   
+       
+       
+       
+       
+   }
+
+   .show-menu {
+       display: block !important;
+   }
+}
 .hero {
    position: relative;
    display: grid;
+
    place-items: center;
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
 }
 
 hero::before{
    content: "";
-   position: absolute;
+   position: absolute !important;
    bottom: 0;
-   width: 100vw;
+   width: 50vw;
    height: 5vh;
    background: linear-gradient(to top,#010115,transparent);
    z-index: 1;
@@ -99,9 +237,10 @@ hero::before{
 
 .hero-img {
    position: absolute;
-   width: 80w;
+   width: 80vw;
    height: 100vh;
-   margin-left: 50vw;
+   right: -24%;
+  bottom: 0%;
    overflow: hidden;
    
    z-index: 1;
@@ -119,10 +258,11 @@ hero::before{
 
 .hero-description {
    position: absolute;
-   width: 40vw;
-   height: 10vh;
-   margin-top: -45vh;
-   margin-left: -30vw;
+   width: 40%;
+   height: 10%;
+   
+   left: 15%;
+   bottom: 72%;
    z-index: 2;
 
 }
@@ -144,11 +284,10 @@ hero::before{
 
 .hero-model {
    position: absolute;
-   margin-top: 15vw;
-   margin-left: -80vw;
+   left: 1%;
+   bottom: 21%;
    width: 20vw;
    height: 20vh;
-
 }
 
 model-viewer {
@@ -158,22 +297,26 @@ model-viewer {
 }
 
 .hire-description{
+   position: absolute;
    color: #fff;
-   font-size: 1.4vw;
-   margin-top: -26vw;
-   margin-left:-34vw ;
+   font-size: 125%;
+   left: 15%;
+   bottom: 48%;
+   
 }
 
 .social-description{
+   position: absolute;
    color: #fff;
-   font-size: 1.4vw;
-   margin-top:-35vw ;
-   margin-left:-34vw ;
+   font-size: 125%;
+   left: 15%;
+   bottom: 66.5%;
 }
 
 .button-container {
-   margin-top:-60vw ;
-   margin-left:-31vw ;
+   position: absolute;
+   left: 14%;
+   bottom: 52%;
    display: flex;
    flex-wrap: wrap;
    gap: 10px; /* Adjust the spacing between buttons */
@@ -231,8 +374,9 @@ model-viewer {
 /* Style for the "Download CV" button */
 
 .hire-button {
-   margin-top:-23vw ;
-   margin-left:-36vw ;
+   position: absolute;
+   left: 12%;
+   bottom: 37%;
    width: 150px; /* Set the width of the "Hire Me" button */
    height: 70px; /* Set the height of the "Hire Me" button */
     /* Custom color for "Hire Me" button */
@@ -242,13 +386,14 @@ model-viewer {
    border-radius: 5px;
    font-weight: bold;
    transition: background-color 0.3s;
-   display: flex;
+   
    align-items: center;
    justify-content: center;
 }
 .cv-button {
-   margin-top:-23vw ;
-   margin-left:-28vw ;
+   position: absolute;
+   left: 21%;
+   bottom: 37%;
    width: 150px; /* Set the width of the "Download CV" button */
    height: 70px; /* Set the height of the "Download CV" button */
     /* Custom color for "Download CV" button */
@@ -258,8 +403,8 @@ model-viewer {
    border-radius: 5px;
    font-weight: bold;
    transition: background-color 0.3s;
-   display: flex;
-   align-items: center;
+   
+   
    justify-content: center;
 }
 
@@ -278,7 +423,7 @@ model-viewer {
 
 
 .about-me {
-   position: relative;
+   position: absolute;
    display: grid;
    place-items: center;
    width: 100vw;
@@ -875,4 +1020,42 @@ model-viewer {
 .robo{
    width: 45vw;
    height: 100vh;
+}
+
+.image-container{
+   position: absolute;
+   bottom: 60%;
+   left: 25%;
+   display: grid;
+   place-items: center;
+   width: 10vw;
+   height: 10vh;
+   border-radius: 5px;
+
+}
+
+.image-containerx{
+   position: absolute;
+   left: 10%;
+   top: 170%;
+   display: grid;
+   place-items: center;
+   width: 45vw;
+   height: 50vh;
+}
+
+.my-dis{
+   position: relative;
+   top: 100%;
+   color: #fff;
+   font-size:  150%;
+   align-content: center;
+}
+ 
+.my-title{
+   position: absolute;
+   bottom: 80%;
+   color: #fff;
+   font-size: 3.5vw;
+   font-family: "Dancing Script";
 }

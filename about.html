@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
         <title>About Me</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Include Font Awesome CSS -->
@@ -19,31 +19,37 @@
             <img src="src\logo.jpg" alt="" class="logo">
             <img src="src\Designer.png" alt="" class="Designer">
             <h1 class="head-title">Portfolio.</h1>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <ul class="main-nav-list">
                 <li><a href="index.html" class="main-nav-link">Home</a></li>
                 <li><a href="work-experince.html" class="main-nav-link">Work Experience</a></li>
                 <li><a href="my-projects.html" class="main-nav-link">My Projects</a></li>
-                <li><a href="apps.html" class="main-nav-link">Apps</a></li>
-                <li><a href="javascripts.html" class="main-nav-link">Java Scripts</a></li>
+                
                 <li><a href="about.html" class="main-nav-link">About Me</a></li>
                 <li><a href="contact.html" class="main-nav-link">Contact</a></li>
             </ul>
         </header>
         <section class="hero">
-            <img src="src\hero1.png" alt="" class="hero-img">
+            
             <img src="src\back1.jpg" alt="" class="bg">
+            <img src="src\hero1.png" alt="" class="hero-img">
             <div class="hero-description">
                 <h1 class="hero-title">Hi, I'm <span class="randil">Randil</span> !</h1>
-                
+    
             </div>
+            
             <div>
                 <p class="social-description">Contact me from social media</p>
-               
+    
             </div>
             <div>
                 <p class="hire-description">Hire me</p>
             </div>
-          
+    
             <div class="button-container">
                 <!-- Social media icons as buttons with links -->
                 <a class="social-icon-button" href="https://www.facebook.com/randil.dulakna?mibextid=ZbWKwL">
@@ -58,7 +64,8 @@
                     <i class="icon fab fa-instagram"></i>
                     Instagram
                 </a>
-                <a class="social-icon-button" href="https://www.linkedin.com/in/dulakna-randil-2a5677242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <a class="social-icon-button"
+                    href="https://www.linkedin.com/in/dulakna-randil-2a5677242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <i class="icon fab fa-linkedin"></i>
                     LinkedIn
                 </a>
@@ -66,57 +73,49 @@
                     <i class="icon fab fa-github"></i>
                     GitHub
                 </a>
-        
-               
+    
+    
             </div>
-    <div> <a class="social-icon-button cv-button" href="https://www.yourcvlink.com"><i class="icon fas fa-file-download"></i>
-        Download CV
-    </a></div>
-        <div>
-             <!-- Hire Me and Download CV buttons with their respective styles -->
-             <a class="social-icon-button hire-button" href="contact.html"> <i class="icon fas fa-user-tie"></i>
-                Hire Me
-            </a>
-           
-        </div>
+            <div> <a class="social-icon-button cv-button" href="https://www.yourcvlink.com"><i
+                        class="icon fas fa-file-download"></i>
+                    Download CV
+                </a></div>
+            <div>
+                <!-- Hire Me and Download CV buttons with their respective styles -->
+                <a class="social-icon-button hire-button" href="contact.html"> <i class="icon fas fa-user-tie"></i>
+                    Hire Me
+                </a>
+    
+            </div>
             <div class="hero-model">
                 <model-viewer src="src\desk.glb" camera-controls disable-pan disable-zoom interaction-prompt="none"
                     min-camera-orbit="auto 55deg auto" max-camera-orbit="auto 92deg auto" field-of-view="35.3deg">
                 </model-viewer>
-    
-    
             </div>
         </section>
    
-    <div id="background-image">
-        <!-- Add your background image here -->
-    </div>
+   
 
-    <section id="about-me">
-        <h2>Hi, I'm [Your Name]</h2>
-        <p>A paragraph describing yourself goes here. Tell your visitors about your background, interests, and anything else you'd like to share.</p>
-
-        <!-- Your pictures -->
+    <section class="about-me">
+        <h2 class="my-title">Hi, I'm  Dulakna Randil</h2>
         <div class="image-container">
-            <img src="yourname.jpg" alt="Your Name">
+            <img src="src\myimg1.png" alt="Your Name">
             <!-- Add another picture of yourself here -->
         </div>
+        <p class="my-dis">I'm Randil, currently an undergraduate student in my second year at Sir John Kotelawala University. My academic journey began at Dhammissara National College, where I pursued the challenging path of the mathematics stream. Beyond my studies, I've developed a keen interest in programming, which I find both intellectually stimulating and creatively satisfying. When I'm not immersed in code, you'll often find me on the cricket field, where I enjoy the thrill of the game, or engaged in epic virtual adventures through video games. These diverse interests are a reflection of my curiosity and love for learning, and I'm excited to see where this journey takes me.</p>
+
+        <!-- Your pictures -->
+       
 
         <!-- Pictures of your hobbies/interests -->
-        <div class="image-container">
-            <img src="hobby1.jpg" alt="Hobby 1">
+        <div class="image-containerx">
+            <img src="src\hobby1.png" alt="Hobby 1">
             <!-- Add another picture of your hobby/interest here -->
         </div>
     </section>
 
     <!-- Optional: Links to your social media pages -->
-    <footer>
-        <ul class="social-media-links">
-            <li><a href="https://www.facebook.com/yourprofile">Facebook</a></li>
-            <li><a href="https://www.twitter.com/yourprofile">Twitter</a></li>
-            <!-- Add links to your other social media profiles here -->
-        </ul>
-    </footer>
+   
     <script src="common.js"></script>
 </body>
 </html>
